@@ -28,3 +28,8 @@ CREATE TABLE "category_data" (
 );
 
 
+ALTER TABLE "cavideos" ADD CONSTRAINT "fk_cavideos_category_id" FOREIGN KEY("category_id")
+REFERENCES "category_data" ("category_id");
+
+ALTER TABLE "usvideos" ADD CONSTRAINT "fk_usvideos_category_id" FOREIGN KEY("category_id")
+REFERENCES "category_data" ("category_id");
